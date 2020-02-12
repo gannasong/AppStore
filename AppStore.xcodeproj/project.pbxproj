@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491307D123F455D1000AC360 /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491307D023F455D1000AC360 /* AppSearchController.swift */; };
 		4915A3E623F43E12005C0010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915A3E523F43E12005C0010 /* AppDelegate.swift */; };
 		4915A3E823F43E12005C0010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915A3E723F43E12005C0010 /* SceneDelegate.swift */; };
 		4915A3EF23F43E15005C0010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4915A3EE23F43E15005C0010 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		491307D023F455D1000AC360 /* AppSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchController.swift; sourceTree = "<group>"; };
 		4915A3E223F43E12005C0010 /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4915A3E523F43E12005C0010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4915A3E723F43E12005C0010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		491307CF23F45581000AC360 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4915A3F923F43EDE005C0010 /* BaseTabBarController.swift */,
+				491307D023F455D1000AC360 /* AppSearchController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		4915A3D923F43E12005C0010 = {
 			isa = PBXGroup;
 			children = (
@@ -54,7 +65,7 @@
 		4915A3E423F43E12005C0010 /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
-				4915A3F923F43EDE005C0010 /* BaseTabBarController.swift */,
+				491307CF23F45581000AC360 /* Controller */,
 				4915A3F323F43E15005C0010 /* Info.plist */,
 				4915A3FB23F4471D005C0010 /* Support */,
 			);
@@ -145,6 +156,7 @@
 				4915A3FA23F43EDE005C0010 /* BaseTabBarController.swift in Sources */,
 				4915A3E623F43E12005C0010 /* AppDelegate.swift in Sources */,
 				4915A3E823F43E12005C0010 /* SceneDelegate.swift in Sources */,
+				491307D123F455D1000AC360 /* AppSearchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
