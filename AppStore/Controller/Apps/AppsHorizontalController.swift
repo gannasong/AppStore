@@ -16,9 +16,9 @@ class AppsHorizontalController: BaseListController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    collectionView.backgroundColor = .blue
+    collectionView.backgroundColor = .white
 
-    collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+    collectionView.register(AppRowCell.self, forCellWithReuseIdentifier: cellId)
 
     if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
       layout.scrollDirection = .horizontal
@@ -30,8 +30,7 @@ class AppsHorizontalController: BaseListController {
   }
 
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-    cell.backgroundColor = .red
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppRowCell
     return cell
   }
 }
@@ -41,7 +40,7 @@ extension AppsHorizontalController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let spacing = (topBottomPadding * 2) + (lineSpacing * 2)
     let height = (view.frame.height - spacing) / 3
-    return .init(width: view.frame.width, height: height)
+    return .init(width: view.frame.width - 48, height: height)
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
