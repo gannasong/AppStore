@@ -50,6 +50,12 @@ class AppSearchController: BaseListController, UICollectionViewDelegateFlowLayou
     return appResults.count
   }
 
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let appId = String(appResults[indexPath.item].trackId)
+    let appDetailController = AppDetailController(appId: appId)
+    navigationController?.pushViewController(appDetailController, animated: true)
+  }
+
   // MARK: - UICollectionViewDelegateFlowLayout
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -62,7 +68,12 @@ class AppSearchController: BaseListController, UICollectionViewDelegateFlowLayou
 
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { _ in
-      Service.shared.fetchApps(searchTerm: searchText) { (res, err) in
+      Service.shared.fetchApps(searchTerm: searchText) { (res, error) in
+        if let error = error {
+          print("Failed to fetch apps:", error)
+          return
+        }
+
         self.appResults = res?.results ?? []
         DispatchQueue.main.async {
           self.collectionView.reloadData()
