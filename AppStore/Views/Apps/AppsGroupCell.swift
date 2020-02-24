@@ -14,7 +14,7 @@ class AppsGroupCell: UICollectionViewCell {
                            font: .boldSystemFont(ofSize: 30))
 
   let horizontalController = AppsHorizontalController()
-
+  
   // MARK: - Initialization
 
   override init(frame: CGRect) {
