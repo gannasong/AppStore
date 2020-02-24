@@ -82,7 +82,7 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
       print("completed your dispatch group tasks...")
 
       self.activityIndicatorView.stopAnimating()
-      
+
       if let group = group1 {
         self.groups.append(group)
       }
@@ -123,6 +123,12 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
     cell.titleLabel.text = appGroups.feed.title
     cell.horizontalController.appGroup = appGroups
     cell.horizontalController.collectionView.reloadData()
+    cell.horizontalController.didSelectHandler = { [weak self] feedResult in
+      let controller = AppDetailController()
+      controller.appId = feedResult.id
+      controller.navigationItem.title = feedResult.name
+      self?.navigationController?.pushViewController(controller, animated: true)
+    }
     return cell
   }
 

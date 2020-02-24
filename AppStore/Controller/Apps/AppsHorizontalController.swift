@@ -15,6 +15,8 @@ class AppsHorizontalController: HorizontalSnappingController {
   let lineSpacing: CGFloat = 10
   var appGroup: AppGroup?
 
+  var didSelectHandler: ((FeedResult) -> Void)?
+
   override func viewDidLoad() {
     super.viewDidLoad()
     collectionView.backgroundColor = .white
@@ -34,6 +36,12 @@ class AppsHorizontalController: HorizontalSnappingController {
     cell.companyLabel.text = app?.artistName
     cell.imageView.sd_setImage(with: URL(string: app?.artworkUrl100 ?? ""))
     return cell
+  }
+
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    guard let app = appGroup?.feed.results[indexPath.item] else { return }
+
+    didSelectHandler?(app)
   }
 }
 
