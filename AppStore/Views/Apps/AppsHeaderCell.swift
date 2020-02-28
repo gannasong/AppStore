@@ -10,6 +10,8 @@ import UIKit
 
 class AppsHeaderCell: UICollectionViewCell {
 
+  static let reuseId = "AppsHeaderCell"
+
   let companyLabel = UILabel(text: "Facebook",
                         font: .boldSystemFont(ofSize: 12))
 
@@ -23,6 +25,7 @@ class AppsHeaderCell: UICollectionViewCell {
 
     companyLabel.textColor = .blue
     titleLabel.numberOfLines = 2
+    imageView.image = UIImage(named: "holiday")
 
     let stackView = VerticalStackView(arrangedSubviews: [
       companyLabel,

@@ -10,6 +10,8 @@ import UIKit
 
 class AppRowCell: UICollectionViewCell {
 
+  static let reuseId = "AppRowCell"
+
   let imageView = UIImageView(cornerRadius: 8)
 
   let nameLabel = UILabel(text: "App Name",
