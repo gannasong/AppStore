@@ -12,6 +12,14 @@ class AppsHeaderCell: UICollectionViewCell {
 
   static let reuseId = "AppsHeaderCell"
 
+  var app: SocialApp! {
+    didSet {
+      companyLabel.text = app.name
+      titleLabel.text = app.tagline
+      imageView.sd_setImage(with: URL(string: app.imageUrl))
+    }
+  }
+
   let companyLabel = UILabel(text: "Facebook",
                         font: .boldSystemFont(ofSize: 12))
 

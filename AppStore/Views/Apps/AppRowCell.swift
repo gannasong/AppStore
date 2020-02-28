@@ -12,6 +12,14 @@ class AppRowCell: UICollectionViewCell {
 
   static let reuseId = "AppRowCell"
 
+  var app: FeedResult! {
+    didSet {
+      nameLabel.text = app.name
+      companyLabel.text = app.artistName
+      imageView.sd_setImage(with: URL(string: app.artworkUrl100))
+    }
+  }
+
   let imageView = UIImageView(cornerRadius: 8)
 
   let nameLabel = UILabel(text: "App Name",

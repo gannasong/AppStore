@@ -9,9 +9,7 @@
 import Foundation
 
 struct AppGroup: Decodable {
-
   let feed: Feed
-
 }
 
 struct Feed: Decodable {
@@ -19,7 +17,7 @@ struct Feed: Decodable {
   let results: [FeedResult]
 }
 
-struct FeedResult: Decodable {
+struct FeedResult: Decodable, Hashable {
   let id: String
   let name: String
   let artistName: String
