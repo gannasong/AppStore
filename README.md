@@ -16,6 +16,17 @@
 ![hero](screenshots/hero.png)
 
 ### Today
+<img alt="01_trending_repository_screen" src="screenshots/today01.png?raw=true" width="280">&nbsp;
+<img alt="02_search_repository_screen" src="screenshots/today02.png??raw=true" width="280">&nbsp;
+<img alt="03_repository_details_screen" src="screenshots/today03.png??raw=true" width="280">&nbsp;
+
+### Apps
+<img alt="04_trending_repository_screen" src="screenshots/apps01.png?raw=true" width="280">&nbsp;
+<img alt="05_search_repository_screen" src="screenshots/apps02.png??raw=true" width="280">&nbsp;
+<img alt="06_repository_details_screen" src="screenshots/apps03.png??raw=true" width="280">&nbsp;
+
+### Search
+<img alt="07_trending_repository_screen" src="screenshots/search01.png?raw=true" width="280">&nbsp;
 
 ## Core Concepts
 - UICollectionView
