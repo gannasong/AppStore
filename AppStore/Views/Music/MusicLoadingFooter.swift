@@ -12,6 +12,8 @@ class MusicLoadingFooter: UICollectionReusableView {
 
   static let reuseId = "MusicLoadingFooter"
 
+  // MARK: - Initialization
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     let aiv = UIActivityIndicatorView(style: .large)

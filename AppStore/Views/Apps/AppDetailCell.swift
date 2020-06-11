@@ -35,6 +35,8 @@ class AppDetailCell: UICollectionViewCell {
                                   font: .systemFont(ofSize: 16),
                                   numberOfLines: 0)
 
+  // MARK: - Initialization
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
 

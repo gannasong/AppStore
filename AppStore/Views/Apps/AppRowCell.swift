@@ -49,10 +49,9 @@ class AppRowCell: UICollectionViewCell {
       VerticalStackView(arrangedSubviews: [nameLabel, companyLabel], spacing: 4),
       getButton
     ])
+
     stackView.spacing = 16
-
-    stackView.alignment = .center // 置中
-
+    stackView.alignment = .center
     addSubview(stackView)
     stackView.fillSuperview()
   }

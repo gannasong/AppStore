@@ -74,7 +74,6 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
       // you should check the err
       dispatchGroup.leave()
       self.socialApps = apps ?? []
-
     }
 
     // completion

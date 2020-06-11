@@ -38,12 +38,13 @@ class ReviewCell: UICollectionViewCell {
     return stackView
   }()
 
+  // MARK: - Initialization
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     backgroundColor = .systemGray6
     layer.cornerRadius = 16
     clipsToBounds = true
-
 
     let stackView = VerticalStackView(arrangedSubviews: [
       UIStackView(arrangedSubviews: [
@@ -59,7 +60,7 @@ class ReviewCell: UICollectionViewCell {
 
     addSubview(stackView)
 
-    // 修正 review cell 間距
+    // adjust review cell space
     stackView.anchor(top: topAnchor,
                      leading: leadingAnchor,
                      bottom: nil,

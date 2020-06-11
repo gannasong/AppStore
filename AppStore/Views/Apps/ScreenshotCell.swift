@@ -14,6 +14,8 @@ class ScreenshotCell: UICollectionViewCell {
 
   let imageView = UIImageView(cornerRadius: 12)
 
+  // MARK: - Initialization
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     addSubview(imageView)

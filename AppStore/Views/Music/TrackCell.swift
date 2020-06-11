@@ -19,16 +19,18 @@ class TrackCell: UICollectionViewCell {
                               font: .systemFont(ofSize: 16),
                               numberOfLines: 2)
 
+  // MARK: - Initialization
+
   override init(frame: CGRect) {
     super.init(frame: frame)
 
     imageView.image = UIImage(named: "garden")
     imageView.constrainWidth(constant: 80)
 
-    // 橫的
+    // Horizonal
     let stackView = UIStackView(arrangedSubviews: [
       imageView,
-      VerticalStackView(arrangedSubviews: [ // 直得
+      VerticalStackView(arrangedSubviews: [ // Vertical
         nameLabel,
         subtitleLabel
       ], spacing: 16),

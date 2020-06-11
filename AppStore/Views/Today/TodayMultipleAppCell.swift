@@ -30,6 +30,8 @@ class TodayMultipleAppCell: BaseTodayCell {
 
   let multipleAppsController = TodayMultipleAppsController(mode: .small)
 
+  // MARK: - Initialization
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     backgroundColor = .white
@@ -48,5 +50,4 @@ class TodayMultipleAppCell: BaseTodayCell {
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
 }

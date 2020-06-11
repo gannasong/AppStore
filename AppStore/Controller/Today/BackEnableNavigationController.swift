@@ -18,5 +18,4 @@ class BackEnableNavigationController: UINavigationController, UIGestureRecognize
   func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
     return self.viewControllers.count > 1
   }
-
 }

@@ -21,7 +21,6 @@ class CompositionalController: UICollectionViewController {
         return CompositionalController.topSection()
       } else {
         // section section
-
         let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1),
                                                             heightDimension: .fractionalHeight(1/3)))
         item.contentInsets = .init(top: 0, leading: 0, bottom: 16, trailing: 16)
@@ -40,8 +39,6 @@ class CompositionalController: UICollectionViewController {
                 elementKind: kind,
                 alignment: .topLeading)
         ]
-
-
         return section
       }
     }
@@ -72,7 +69,6 @@ class CompositionalController: UICollectionViewController {
     collectionView.refreshControl = UIRefreshControl()
     collectionView.refreshControl?.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
 //    fetchApps()
-
     setupDiffableDatasource()
   }
 
@@ -111,7 +107,6 @@ class CompositionalController: UICollectionViewController {
       cell.getButton.addTarget(self, action: #selector(self.handleGet), for: .primaryActionTriggered)
       return cell
     }
-
     return nil
   }
 
@@ -154,9 +149,7 @@ class CompositionalController: UICollectionViewController {
     })
 
     Service.shared.fetchSocialApps { (socialApps, error) in
-
       Service.shared.fetchTopGrossing { (appGroup, error) in
-
         Service.shared.fetchGames { (gamesGroup, error) in
           var snapshot = self.diffableDataSource.snapshot()
           snapshot.appendSections([.topSocial, .grossing, .games])
@@ -170,7 +163,6 @@ class CompositionalController: UICollectionViewController {
 
           // freeGame
           snapshot.appendItems(gamesGroup?.feed.results ?? [], toSection: .games)
-
           self.diffableDataSource.apply(snapshot)
         }
       }
@@ -275,13 +267,14 @@ class CompositionalController: UICollectionViewController {
   }
 }
 
-
 class CompositionalHeader: UICollectionReusableView {
 
   static let reuseId = "CompositionalHeader"
 
   let label = UILabel(text: "Editor's Choise Games",
                       font: .boldSystemFont(ofSize: 32))
+
+  // MARK: - Initialization
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -295,7 +288,7 @@ class CompositionalHeader: UICollectionReusableView {
 }
 
 
-// 使用 SwiftUI Preview，快速可以看到更動的效果
+// Use SwiftUI Preview
 struct AppsView: UIViewControllerRepresentable {
   func makeUIViewController(context: UIViewControllerRepresentableContext<AppsView>) -> UIViewController {
     let controller = CompositionalController()

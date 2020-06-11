@@ -8,13 +8,10 @@
 
 import UIKit
 
-// 1. Implement Cell
-
-// 2. Impletemnt a footer for a loading cell
 class MusicController: BaseListController {
 
   var results = [Result]()
-  var isPaginating = false // 注意
+  var isPaginating = false
   var isDonePaginating = false
 
   override func viewDidLoad() {
@@ -69,7 +66,6 @@ class MusicController: BaseListController {
         }
 
         sleep(2)
-
         self.results += searchResult?.results ?? []
         DispatchQueue.main.async {
           self.collectionView.reloadData()

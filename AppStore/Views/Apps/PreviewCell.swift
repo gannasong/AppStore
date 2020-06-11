@@ -16,6 +16,8 @@ class PreviewCell: UICollectionViewCell {
                              font: .boldSystemFont(ofSize: 20))
   let horizontalController = PreviewScreenshotsController()
 
+  // MARK: - Initialization
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     addSubview(previewLabel)
@@ -36,5 +38,4 @@ class PreviewCell: UICollectionViewCell {
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-
 }

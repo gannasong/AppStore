@@ -56,7 +56,6 @@ class AppFullscreenController: UIViewController, UITableViewDataSource, UITableV
     floatingcontainerView.layer.cornerRadius = 16
     floatingcontainerView.clipsToBounds = true
     view.addSubview(floatingcontainerView)
-//    let bottomPadding = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 44
 
     floatingcontainerView.anchor(top: nil,
                                  leading: view.leadingAnchor,
@@ -151,29 +150,6 @@ class AppFullscreenController: UIViewController, UITableViewDataSource, UITableV
                    options: .curveEaseOut, animations: {
                     self.floatingcontainerView.transform = transform
     })
-
-//    if scrollView.contentOffset.y > 100 {
-//      if floatingcontainerView.transform == .identity {
-//        UIView.animate(withDuration: 0.7,
-//                       delay: 0,
-//                       usingSpringWithDamping: 0.7,
-//                       initialSpringVelocity: 0.7,
-//                       options: .curveEaseOut,
-//                       animations: {
-//                        let translationY: CGFloat = -90 - 44
-//                        self.floatingcontainerView.transform = .init(scaleX: 0, y: translationY)
-//        })
-//      }
-//    } else {
-//      UIView.animate(withDuration: 0.7,
-//                     delay: 0,
-//                     usingSpringWithDamping: 0.7,
-//                     initialSpringVelocity: 0.7,
-//                     options: .curveEaseOut,
-//                     animations: {
-//                      self.floatingcontainerView.transform = .identity
-//      })
-//    }
   }
 
   // MARK: - Private Methods

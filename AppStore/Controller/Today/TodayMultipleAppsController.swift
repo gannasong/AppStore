@@ -45,7 +45,7 @@ class TodayMultipleAppsController: BaseListController {
       setupCloseButton()
       navigationController?.isNavigationBarHidden = true
     } else {
-      collectionView.isScrollEnabled = false // 避免在選單內滑動
+      collectionView.isScrollEnabled = false // Avoid scroll in cell
     }
 
     collectionView.backgroundColor = .white

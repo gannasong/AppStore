@@ -36,7 +36,9 @@ class AppFullscreenDescriptionCell: UITableViewCell {
     
     return label
   }()
-  
+
+  // MARK: - Initialization
+
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     addSubview(descriptionLabel)

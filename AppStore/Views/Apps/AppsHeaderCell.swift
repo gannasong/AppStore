@@ -28,6 +28,8 @@ class AppsHeaderCell: UICollectionViewCell {
 
   let imageView = UIImageView(cornerRadius: 8)
 
+  // MARK: - Initialization
+
   override init(frame: CGRect) {
     super.init(frame: frame)
 
@@ -48,5 +50,4 @@ class AppsHeaderCell: UICollectionViewCell {
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-
 }

@@ -51,6 +51,8 @@ class TodayController: BaseListController, UIGestureRecognizerDelegate {
     tabBarController?.tabBar.superview?.setNeedsLayout()
   }
 
+  // MARK: - UICollectionViewDataSource
+
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return items.count
   }
@@ -100,15 +102,9 @@ class TodayController: BaseListController, UIGestureRecognizerDelegate {
 
     appFullscreenController.view.layer.cornerRadius = 16
     self.appFullscreenController = appFullscreenController
-
-    // #1 setup our pan gesture
     let gesture = UIPanGestureRecognizer(target: self, action: #selector(handleDrag))
     gesture.delegate = self
     appFullscreenController.view.addGestureRecognizer(gesture)
-
-    // #2 add a blue effect view
-
-    // #3 not to interfere with our UITableView scrolling
   }
 
   // MARK: - UIGestureRecognizerDelegate
@@ -123,7 +119,6 @@ class TodayController: BaseListController, UIGestureRecognizerDelegate {
     }
 
     let translationY = gesture.translation(in: appFullscreenController.view).y
-//    print(translationY)
 
     if appFullscreenController.tableView.contentOffset.y > 0 {
       return
@@ -305,7 +300,6 @@ class TodayController: BaseListController, UIGestureRecognizerDelegate {
       self.collectionView.reloadData()
     }
   }
-
 }
 
 extension TodayController: UICollectionViewDelegateFlowLayout {
