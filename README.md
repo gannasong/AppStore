@@ -13,3 +13,29 @@
 
 ## Screenshots
 
+![hero](screenshots/hero.png)
+
+## Core Concepts
+- UICollectionView
+- UITabBarController
+- UISearchController
+- UIStackViews Layout
+- Child View Controller
+- Snapping Flow Layout
+- JSON Decodable
+- Asynchronous Date Fetch
+- DispatchGroup Synding
+- Custom Animations
+- SDWebImage Caching
+- Generics
+
+## Building and Running
+
+The following commands will set up AppStore
+```sh
+cd AppStore
+pod install
+```
+
+## License
+MIT License. See [LICENSE](https://github.com/gannasong/AppStore/blob/master/LICENSE).
